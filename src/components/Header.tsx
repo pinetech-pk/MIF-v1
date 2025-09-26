@@ -1,9 +1,10 @@
-//src/components/Header.tsx
+// src/components/Header.tsx - Fixed version using Next.js Image component
 "use client";
 
 import { useState } from "react";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,10 +28,13 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             {/* Logo Image - Responsive sizes */}
             <div className="flex-shrink-0">
-              <img
+              <Image
                 src="/images/mif-logo.png"
                 alt="MIF Logo"
+                width={48}
+                height={48}
                 className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain"
+                priority
               />
             </div>
 
