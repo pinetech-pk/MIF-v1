@@ -1,4 +1,4 @@
-// src/lib/mongodb.ts - Fixed version with proper TypeScript types
+// src/lib/mongodb.ts - Final fixed version without ESLint warning
 import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI!;
@@ -15,7 +15,6 @@ interface MongooseCache {
 
 // Extend global interface to include mongoose cache
 declare global {
-  // eslint-disable-next-line no-var
   var mongoose: MongooseCache | undefined;
 }
 
