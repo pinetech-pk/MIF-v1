@@ -1,3 +1,4 @@
+//srs/app/dashboard/page.tsx
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { redirect } from "next/navigation";
