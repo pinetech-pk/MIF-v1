@@ -1,5 +1,6 @@
-// src/components/ui/Logo.tsx - Reusable logo component
+// src/components/ui/Logo.tsx - Reusable logo component with home navigation
 import Image from "next/image";
+import Link from "next/link";
 
 interface LogoProps {
   size?: "sm" | "md" | "lg";
@@ -21,7 +22,10 @@ const Logo = ({ size = "md", showText = true, className = "" }: LogoProps) => {
   };
 
   return (
-    <div className={`flex items-center space-x-3 ${className}`}>
+    <Link
+      href="/"
+      className={`flex items-center space-x-3 hover:opacity-80 transition-opacity ${className}`}
+    >
       <div className="flex-shrink-0">
         <Image
           src="/images/mif-logo.png"
@@ -41,7 +45,7 @@ const Logo = ({ size = "md", showText = true, className = "" }: LogoProps) => {
           </div>
         </div>
       )}
-    </div>
+    </Link>
   );
 };
 

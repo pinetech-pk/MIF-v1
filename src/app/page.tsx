@@ -1,51 +1,40 @@
-import {
-  LoginLink,
-  LogoutLink,
-  RegisterLink,
-  getKindeServerSession,
-} from "@kinde-oss/kinde-auth-nextjs/server";
+// src/app/page.tsx - Refactored landing page with sections
+import HeroSection from "@/components/sections/HeroSection";
 
-export default async function Home() {
-  const { isAuthenticated, getUser } = getKindeServerSession();
-  const user = await getUser();
-
+export default function Home() {
   return (
-    <main className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-8">
-        Welcome to MIF Platform
-      </h1>
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <HeroSection />
 
-      {(await isAuthenticated()) ? (
-        <div className="text-center">
-          <p className="mb-4">Welcome back, {user?.given_name}!</p>
-          <div className="space-x-4">
-            <a
-              href="/dashboard"
-              className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
-            >
-              Go to Dashboard
-            </a>
-            <LogoutLink className="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600">
-              Logout
-            </LogoutLink>
-          </div>
-        </div>
-      ) : (
-        <div className="text-center">
-          <p className="mb-6 text-gray-600">
-            Join MIF Platform to support education, healthcare, and social
-            welfare projects
+      {/* Features Section - We'll add this next */}
+      <section className="py-16 lg:py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            Features Section Coming Soon
+          </h2>
+          <p className="text-gray-600">
+            This is where we'll add the features section next
           </p>
-          <div className="space-x-4">
-            <LoginLink className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 font-medium">
-              Sign In
-            </LoginLink>
-            <RegisterLink className="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 font-medium">
-              Sign Up
-            </RegisterLink>
-          </div>
         </div>
-      )}
+      </section>
+
+      {/* Additional sections will go here */}
+      <section className="py-16 lg:py-20 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            Section 3 Placeholder
+          </h2>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            Section 4 Placeholder
+          </h2>
+        </div>
+      </section>
     </main>
   );
 }
