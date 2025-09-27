@@ -14,7 +14,7 @@ export default function Home() {
             Features Section Coming Soon
           </h2>
           <p className="text-gray-600">
-            This is where we'll add the features section next
+            This is where we will add the features section next
           </p>
         </div>
       </section>
