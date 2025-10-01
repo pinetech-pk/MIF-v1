@@ -8,34 +8,48 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 const AffiliationsCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Affiliations data based on your images
+  // Affiliations data based on your provided list
   const affiliations = [
     {
-      name: "Sindh Charities Registration & Regulation Commission",
-      logo: "/images/sindh-charities.png", // You'll need to add these images
+      name: "United Nations - UN",
+      logo: "/images/un-logo.png",
       description: "Visit Website",
-      website: "#",
+      website: "https://www.undp.org/",
       hasWebsite: true,
     },
     {
-      name: "Joint Stock Companies, Sindh, Directorate of Industries",
+      name: "Sindh Charities Registration & Regulation Commission",
+      logo: "/images/sindh-charities.png",
+      description: "Visit Website",
+      website: "https://charitycommission.sindh.gov.pk/",
+      hasWebsite: true,
+    },
+    {
+      name: "Joint Stock Companies, Sindh, Directorate of Industries & Commerce, Government of Sindh - Karachi",
       logo: "/images/joint-stock.png",
       description: "Website Not Available",
       website: null,
       hasWebsite: false,
     },
     {
-      name: "Federal Board of Revenue (FBR)",
+      name: "Federal Board of Revenue",
       logo: "/images/fbr-logo.png",
       description: "Visit Website",
-      website: "#",
+      website: "https://www.fbr.gov.pk/",
       hasWebsite: true,
     },
     {
-      name: "United Nations - UNDP",
-      logo: "/images/undp-logo.png",
+      name: "Wifaq-ul-Madaris al-Arabia, Pakistan",
+      logo: "/images/wifaq-logo.png",
       description: "Visit Website",
-      website: "#",
+      website: "https://wifaqulmadaris.org/",
+      hasWebsite: true,
+    },
+    {
+      name: "Directorate General of Religious Education (DGRE)",
+      logo: "/images/dgre-logo.png",
+      description: "Visit Website",
+      website: "https://dgre.gov.pk/",
       hasWebsite: true,
     },
   ];
