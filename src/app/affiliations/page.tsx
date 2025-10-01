@@ -110,11 +110,20 @@ export default function AffiliationsPage() {
     },
   ];
 
+  interface Affiliation {
+    name: string;
+    logo: string;
+    website: string | null;
+    description: string;
+    category: string;
+    icon: React.ComponentType<{ className?: string }>;
+  }
+
   const AffiliationCard = ({
     affiliation,
     isRegistered = true,
   }: {
-    affiliation: any;
+    affiliation: Affiliation;
     isRegistered?: boolean;
   }) => {
     const IconComponent = affiliation.icon;
